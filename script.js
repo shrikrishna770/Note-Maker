@@ -9,14 +9,15 @@ const moonIcon = document.getElementById('moon')
 // Theme Toggle
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
-  localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-
+  
   if (moonIcon.style.display === 'none') {
     moonIcon.style.display = 'block'; 
     sunIcon.style.display = 'none';   
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
   } else {
     moonIcon.style.display = 'none';  
     sunIcon.style.display = 'block';  
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
   }
 });
 
